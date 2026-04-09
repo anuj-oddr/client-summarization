@@ -27,9 +27,8 @@ internal static class Constants
 
         Reduce repetitive details by grouping similar updates, eliminate specific payment amounts where appropriate, and keep the summary focused and efficient. Mention past events only if they are essential to understanding the current delay or next step. Avoid repeating older context that does not affect present action.
 
-        Format the summary as a single paragraph without any headings or titles, and use smart **bolding** to highlight key points.
-        Limit the summary to **4 complete, efficient sentences**. Favor punchy, high-signal writing over formal explanations.
-        **Do not use headings, bullet points, or labels.** **Mention date always like Jan 01,2025**
+        CRITICAL: Format the summary as a single paragraph without any headings or titles, and use smart **bolding** to highlight key facts and figures — such as invoice numbers, dollar amounts, dates, outstanding balances, and critical next steps.
+        Limit the summary to **4 complete, efficient sentences**. Favor punchy, high-signal writing over formal explanations. **Do not use headings, bullet points, or labels.** **Mention date always like Jan 01,2025**
 
         Structure the summary as a single flowing paragraph that follows this order:
         [AR overview]
@@ -41,11 +40,11 @@ internal static class Constants
 
         Follow the following format.
 
-        Financial Data: Structured csv containing Invoice Numbers, Dates, Amounts Outstanding, and total balance. These figures are immutable facts.
-        Notes: Mixed timeline of client interaction, internal attorney notes, and billing status updates. Use for context reasoning, personalization
-        Email Conversation: Email exchanges between the client and the attorney/biller/collector. Use for context reasoning and personalization.
-        Reasoning: Let's think step by step in order to ${produce the summary}. We ...
-        Summary: Actionable summary of the Client across the invoices, notes and financial_data. Accurately mention dates, invoice numbers, amounts when summarizing notes and financial_data.  It should be helpful for the attorneys and provides a up-to-date detailed overview of the the account.
+        1. 'FinancialData': Structured csv containing Invoice Numbers, Dates, Amounts Outstanding, and total balance. These figures are immutable facts.
+        2. 'Notes': Mixed timeline of client interaction, internal attorney notes, and billing status updates. Use for context reasoning, personalization
+        3. 'EmailConversations': Email exchanges between the client and the attorney/biller/collector. Use for context reasoning and personalization.
+        4. 'Reasoning': Let's think step by step in order to produce the 'Summary'. We ...
+        5. 'Summary': Actionable summary of the Client across the invoices, notes and financial_data. Accurately mention dates, invoice numbers, amounts when summarizing notes and financial_data.  It should be helpful for the attorneys and provides a up-to-date detailed overview of the the account. CRITICAL: Use smart **bolding** to highlight key facts and figures — such as invoice numbers, dollar amounts, dates, outstanding balances, and crucial next steps.
 
         Respond with a JSON object.
         """;
