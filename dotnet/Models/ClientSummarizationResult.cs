@@ -14,15 +14,15 @@ public sealed class ClientSummarizationResult
     /// <summary>
     /// Chain-of-thought reasoning step added by dspy.ChainOfThought before producing the summary.
     /// </summary>
-    [Description("Let's think step by step in order to ${produce the summary} ")]
-    [JsonPropertyName("reasoning")]
+    [Description("Let's think step by step in order to produce the 'Summary'. We ... ")]
+    [JsonPropertyName("Reasoning")]
     public required string Reasoning { get; init; }
 
     /// <summary>
     /// Final attorney-ready summary paragraph.
     /// </summary>
-    [Description("Actionable summary of the Client across the invoices, notes and financial_data. Accurately mention dates, invoice numbers, amounts when summarizing notes and financial_data.  It should be helpful for the attorneys and provides a up-to-date detailed overview of the the account.")]
-    [JsonPropertyName("summary")]
+    [Description("Actionable summary of the Client across the invoices, notes and financial_data. Accurately mention dates, invoice numbers, amounts when summarizing notes and financial_data.  It should be helpful for the attorneys and provides a up-to-date detailed overview of the the account. CRITICAL: Use smart **bolding** to highlight key facts and figures — such as invoice numbers, dollar amounts, dates, outstanding balances, and crucial next steps")]
+    [JsonPropertyName("Summary")]
     public required string Summary { get; init; }
 
     // ---------------------------------------------------------------------------
